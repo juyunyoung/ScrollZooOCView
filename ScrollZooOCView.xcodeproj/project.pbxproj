@@ -14,6 +14,7 @@
 		920D928025CECC0C00ECDE72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920D927F25CECC0C00ECDE72 /* Assets.xcassets */; };
 		920D928325CECC0C00ECDE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920D928125CECC0C00ECDE72 /* LaunchScreen.storyboard */; };
 		920D928625CECC0C00ECDE72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 920D928525CECC0C00ECDE72 /* main.m */; };
+		920D928E25D01C1D00ECDE72 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 920D928D25D01C1D00ECDE72 /* ImageScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		920D928225CECC0C00ECDE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		920D928425CECC0C00ECDE72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		920D928525CECC0C00ECDE72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		920D928D25D01C1D00ECDE72 /* ImageScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
+		920D929025D01C4B00ECDE72 /* ImageScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				920D928125CECC0C00ECDE72 /* LaunchScreen.storyboard */,
 				920D928425CECC0C00ECDE72 /* Info.plist */,
 				920D928525CECC0C00ECDE72 /* main.m */,
+				920D928D25D01C1D00ECDE72 /* ImageScrollView.m */,
+				920D929025D01C4B00ECDE72 /* ImageScrollView.h */,
 			);
 			path = ScrollZooOCView;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				920D927525CECC0A00ECDE72 /* AppDelegate.m in Sources */,
 				920D928625CECC0C00ECDE72 /* main.m in Sources */,
 				920D927825CECC0A00ECDE72 /* SceneDelegate.m in Sources */,
+				920D928E25D01C1D00ECDE72 /* ImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
