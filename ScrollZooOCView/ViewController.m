@@ -47,12 +47,9 @@
         frame.origin.x = scrollView.frame.size.width * idx;
         frame.size = scrollView.frame.size;
         ImageScrollView *imageScrollView = [[ImageScrollView alloc] init:frame];
-        imageScrollView.set(image: UIImage(named: image[idx])!);
-        self.scrollView.addSubview(imageScrollView);
+        [imageScrollView set:[[UIImage]imageNamed:@image[idx]]];
+        [self.scrollView addSubview:imageScrollView];
  
-        
-        
-        NSLog(@"%d: %@", idx, obj);
     }];
 
     
@@ -63,9 +60,9 @@
         imageScrollView.set(image: UIImage(named: image[index])!)
         self.scrollView.addSubview(imageScrollView)
     }
-*/
-    scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(image.count)), height: scrollView.frame.size.height)
-    scrollView.delegate = self
+  */
+    scrollView.contentSize = CGSizeMake((scrollView.frame.size.width * image.count), scrollView.frame.size.height);
+    scrollView.delegate = self;
 }
 - (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     double pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width;
