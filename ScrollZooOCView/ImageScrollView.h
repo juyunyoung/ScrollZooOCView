@@ -7,21 +7,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageScrollView : UIViewController<UIScrollViewDelegate>{
+@interface ImageScrollView : UIScrollView<UIScrollViewDelegate>{
     
     UIImageView *imageZoomView;
     UITapGestureRecognizer *UITapGestureRecognizer;
     
 }
--(void)init;
--(void)set;
--(void)configurateFor;
+-(id)init:(CGRect) frame;
+-(void)set:(UIImage*) image ;
+-(void)configurateFor:(CGSize) imageSize;
 -(void)layoutSubviews;
 -(void)setCurrentMaxandMinZoomScale;
 -(void)centerImage;
--(void)handleZoomingTap;
--(void)zoom;
--(void)zoomRect;
--(void)viewForZooming;
+-(void)handleZoomingTap:(UITapGestureRecognizer *)sender;
+-(void)zoom:(CGPoint)point animated:(bool) animated;
+-(CGRect)zoomRect:(CGFloat)scale centers:(CGPoint)center ;
+-(UIView*)viewForZooming;
 -(void)scrollViewDidZoom;
 @end /* ImageScrollView_h */

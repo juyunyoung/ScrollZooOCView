@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController<UIScrollViewDelegate>{
     CGRect frame;
     NSArray *image;
-    UIPageControl *pageControl;
     UIScrollView *scrollView;
 }
 - (void) setupScreens;
