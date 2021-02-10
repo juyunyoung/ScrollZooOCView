@@ -87,7 +87,6 @@
     NSLog(@"xScale===%f",xScale);
     NSLog(@"yScale===%f",yScale);
     NSLog(@"minScale===%f",minScale);
-    minScale = 0.18;
     
     CGFloat maxScale = 1.0;
     if (minScale < 0.1) {
@@ -99,7 +98,6 @@
     if (minScale >= 0.5) {
         maxScale = MAX(1.0, minScale);
     }
-    maxScale = 0.7;
     NSLog(@"final minScale===%f",minScale);
     self.minimumZoomScale = minScale;
     self.maximumZoomScale = maxScale;
