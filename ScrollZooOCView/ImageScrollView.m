@@ -140,10 +140,9 @@
 -(void)  configurateFor:(CGSize) imageSize {
     self.contentSize = imageSize;
     
-    [self setCurrentMaxandMinZoomScale];
-    self.zoomScale = 0.7f;
-    //self.zoomScale = self.minimumZoomScale;
-    
+    [self setCurrentMaxandMinZoomScale];    
+    self.zoomScale = self.minimumZoomScale;
+
     [imageZoomView addGestureRecognizer:self.zoomingTap];
     [imageZoomView setUserInteractionEnabled:YES];
 
