@@ -148,7 +148,9 @@
 
 }
 
-
+-(UIView *) viewForZoomingInScrollView:(UIScrollView *)inScroll {
+  return imageZoomView;
+}
 
 
 
