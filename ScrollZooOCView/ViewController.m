@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     frame = CGRectZero;
+
     image = [[NSArray alloc]initWithObjects:@"bg1.png",@"bg2.png",@"bg3.png",@"bg4.png",nil];
     scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     scrollView.showsHorizontalScrollIndicator = NO;

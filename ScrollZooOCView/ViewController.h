@@ -14,6 +14,6 @@
     UIScrollView *scrollView;
 }
 - (void) setupScreens;
-
+-(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 @end
 
