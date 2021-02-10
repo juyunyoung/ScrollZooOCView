@@ -75,19 +75,9 @@
 -(void)  setCurrentMaxandMinZoomScale {
     CGSize boundsSize = self.bounds.size;
     CGSize imageSize = imageZoomView.bounds.size;
-    NSLog(@"boundsSize.height===%f",boundsSize.height);
-    NSLog(@"boundsSize.width===%f",boundsSize.width);
-    NSLog(@"imageSize.height===%f",imageSize.height);
-    NSLog(@"imageSize.width===%f",imageSize.width);
     CGFloat xScale = boundsSize.width / imageSize.width;
     CGFloat yScale = boundsSize.height / imageSize.height;
-    NSLog(@"xScale===%f",xScale);
-    NSLog(@"yScale===%f",yScale);
-
     CGFloat minScale = MIN(xScale, yScale);
-    NSLog(@"xScale===%f",xScale);
-    NSLog(@"yScale===%f",yScale);
-    NSLog(@"minScale===%f",minScale);
     
     CGFloat maxScale = 1.0;
     if (minScale < 0.1) {
@@ -99,7 +89,6 @@
     if (minScale >= 0.5) {
         maxScale = MAX(1.0, minScale);
     }
-    NSLog(@"final minScale===%f",minScale);
     self.minimumZoomScale = minScale;
     self.maximumZoomScale = maxScale;
 }
