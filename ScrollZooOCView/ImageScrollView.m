@@ -31,10 +31,10 @@
     return self;
 }
 
--(UIView*) viewForZooming:(UIScrollView*) scrollView {
+-(UIView*) viewForZooming:(UIScrollView *) scrollView {
     return imageZoomView;
 }
--(void) scrollViewDidZoom:(UIScrollView*) scrollView{
+-(void) scrollViewDidZoom:(UIScrollView *) scrollView{
     [self centerImage ];
 }
 
@@ -43,7 +43,7 @@
     [self centerImage];
 }
 
--(void)  set:(UIImage*) image {
+-(void)  set:(UIImage *) image {
     
     [imageZoomView removeFromSuperview];
     imageZoomView = nil;
