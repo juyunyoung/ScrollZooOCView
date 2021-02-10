@@ -39,6 +39,7 @@
 }
 
 -(void) layoutSubview {
+    NSLog(@"layoutSubview");
     [super layoutIfNeeded];
     [self centerImage];
 }
@@ -131,6 +132,7 @@
 
 // gesture
 -(void) handleZoomingTap:(UITapGestureRecognizer *)sender{
+    
     CGPoint location =   [sender locationInView: sender.view];
     [self zoom:location animated: YES];
 }

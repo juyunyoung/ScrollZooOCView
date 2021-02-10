@@ -24,4 +24,5 @@
 -(CGRect)zoomRect:(CGFloat)scale centers:(CGPoint)center ;
 -(UIView*)viewForZooming;
 -(void)scrollViewDidZoom;
+-(UIView *) viewForZoomingInScrollView:(UIScrollView *)inScroll ;
 @end /* ImageScrollView_h */
