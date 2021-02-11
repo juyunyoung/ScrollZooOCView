@@ -26,7 +26,7 @@
     self.delegate = self;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor blackColor];
     self.decelerationRate = UIScrollViewDecelerationRateFast;
     return self;
 }

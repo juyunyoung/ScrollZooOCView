@@ -12,8 +12,9 @@
     CGRect frame;
     NSArray *image;
     UIScrollView *scrollView;
+    NSInteger beforePage;
 }
 - (void) setupScreens;
--(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 @end
 

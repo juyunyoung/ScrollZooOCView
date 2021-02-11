@@ -17,15 +17,17 @@
 
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     frame = CGRectZero;
-
+    beforePage= 1;
     image = [[NSArray alloc]initWithObjects:@"bg1.png",@"bg2.png",@"bg3.png",@"bg4.png",nil];
     scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
     [scrollView setPagingEnabled:YES];
-    scrollView.backgroundColor =  [UIColor blackColor];
-    [super viewDidLoad];
+    
+    self.view.backgroundColor =  [UIColor blackColor];
+    
     [self.view addSubview:scrollView];
     [self setupScreens];
     
@@ -47,9 +49,11 @@
     scrollView.delegate = self;
 }
 -(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    CGFloat pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width;
-    ImageScrollView *srollview = [self.view viewWithTag:pageNumber+1];
-    srollview.zoomScale = srollview.minimumZoomScale;
-
+    NSInteger pageNumber = (scrollView.contentOffset.x / scrollView.frame.size.width)+1;
+    ImageScrollView *srollview = [self.view viewWithTag:beforePage];
+    if((beforePage != (NSInteger) pageNumber) && (srollview.zoomScale != srollview.minimumZoomScale)){
+        srollview.zoomScale = srollview.minimumZoomScale;
+    }
+    beforePage = pageNumber;
 }
 @end
